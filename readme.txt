@@ -1,0 +1,74 @@
+=== SlimFAQ for WordPress ===
+Contributors: lumpysimon, consti
+Tags: intercom, intercom.io, crm, messaging, contact form, support, email, feedback, customer relationship management, users, slimfaq, faq, sidebar
+Requires at least: 3.8
+Tested up to: 4.5
+Stable tag: trunk
+
+Easy integration of the SlimFAQ sidebar with optional Intercom integration.
+
+== Description ==
+
+[SlimFAQ](https://slimfaq.com) provides a simple FAQ platform and great integration with Intercom and as a sidebar on WordPress.
+
+This plugin generates the Javascript install code to integrate all of this functionality into your WordPress-powered web app.
+
+This plugin is based on the excellent work of [Simon Blackbourn's](https://lumpylemon.co.uk) [Intercom for WordPress](https://wordpress.org/plugins/intercom-for-wordpress) plugin.
+
+== Frequently Asked Questions ==
+
+= How do I get started? =
+
+This plugin only works with a SlimFAQ account. You can get started for free at [slimfaq.com](https://slimfaq.com).
+
+= How do I exclude other user roles from seeing the FAQ? =
+
+Simply add the `hide_from_slimfaq` capability to the user role.
+
+The following example will exclude editors, you should put this code in your theme's functions.php or a plugin:
+
+`
+$role = get_role( 'editor' );
+$role->add_cap( 'hide_from_slimfaq' );
+`
+
+= Where can I find my FAQ ID? =
+
+After signing up for a SlimFAQ account, you can find your FAQ ID in your [FAQ's settings page](https://slimfaq.com/account/settings).
+
+= Can I display the FAQ to users who have not logged in? =
+
+= Can I completely disable the snippet on certain pages? =
+
+Sure, just use the `ll_slimfaq_output_snippet` filter. Here's an example:
+
+`
+add_filter( 'll_slimfaq_output_snippet', 'no_slimfaq_on_page_10' );
+
+function no_slimfaq_on_page_10( $show ) {
+
+	if ( is_page( 10 ) )
+		return false;
+
+	return true;
+
+}
+`
+
+= Does this plugin work on older versions of WordPress or PHP? =
+
+Possibly, but I've not tried. I can only provide support if you're using the latest version of this plugin together with the latest version of WordPress and PHP 5.2.4 or newer.
+
+== Installation ==
+
+1. Upload the slimfaq-for-wordpress folder to your wp-content/plugins/ directory.
+2. Activate the plugin through the Plugins menu in WordPress.
+3. Go to the settings page.
+4. Enter your FAQ ID.
+6. Choose if you like to show the sidebar for logged out users and whether to integrate with Intercom.
+7. Highly recommended: if you are using Intercom, get the [Intercom for WordPress Plugin](https://wordpress.org/plugins/intercom-for-wordpress).
+
+== Changelog ==
+
+= 1.0 (14th June 2016) =
+* Initial release, based on [Intercom for WordPress Plugin](https://wordpress.org/plugins/intercom-for-wordpress)
