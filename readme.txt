@@ -1,4 +1,4 @@
-=== SlimFAQ for WordPress ===
+=== SlimFAQ ===
 Contributors: lumpysimon, consti
 Tags: intercom, intercom.io, crm, messaging, contact form, support, email, feedback, customer relationship management, users, slimfaq, faq, sidebar
 Requires at least: 3.8
@@ -13,7 +13,10 @@ Easy integration of the SlimFAQ sidebar with optional Intercom integration.
 
 This plugin generates the Javascript install code to integrate all of this functionality into your WordPress-powered web app.
 
+This plugin is fully compatible with the [Official Intercom WordPress plugin](https://wordpress.org/plugins/intercom).
+
 This plugin is based on the excellent work of [Simon Blackbourn's](https://lumpylemon.co.uk) [Intercom for WordPress](https://wordpress.org/plugins/intercom-for-wordpress) plugin.
+
 
 == Frequently Asked Questions ==
 
@@ -21,22 +24,17 @@ This plugin is based on the excellent work of [Simon Blackbourn's](https://lumpy
 
 This plugin only works with a SlimFAQ account. You can get started for free at [slimfaq.com](https://slimfaq.com).
 
-= How do I exclude other user roles from seeing the FAQ? =
-
-Simply add the `hide_from_slimfaq` capability to the user role.
-
-The following example will exclude editors, you should put this code in your theme's functions.php or a plugin:
-
-`
-$role = get_role( 'editor' );
-$role->add_cap( 'hide_from_slimfaq' );
-`
-
 = Where can I find my FAQ ID? =
 
 After signing up for a SlimFAQ account, you can find your FAQ ID in your [FAQ's settings page](https://slimfaq.com/account/settings).
 
 = Can I display the FAQ to users who have not logged in? =
+
+Just enable the "show for logged out users" flag on the settings page.
+
+= How do I integrate SlimFAQ with Intercom? =
+
+Install and setup the [Official Intercom WordPress Plugin](https://wordpress.org/plugins/intercom) - then install the SlimFAQ plugin. In the SlimFAQ settings, enable "Integrate with Intercom".
 
 = Can I completely disable the snippet on certain pages? =
 
@@ -66,9 +64,12 @@ Possibly, but I've not tried. I can only provide support if you're using the lat
 3. Go to the settings page.
 4. Enter your FAQ ID.
 6. Choose if you like to show the sidebar for logged out users and whether to integrate with Intercom.
-7. Highly recommended: if you are using Intercom, get the [Intercom for WordPress Plugin](https://wordpress.org/plugins/intercom-for-wordpress).
+7. Highly recommended: if you are using Intercom, get the [Official Intercom WordPress Plugin](https://wordpress.org/plugins/intercom).
 
 == Changelog ==
+
+= 1.1 (15th June 2016) =
+* Remove user role setting; mention the Official Intercom WordPress plugin. Change name to SlimFAQ.
 
 = 1.0 (14th June 2016) =
 * Initial release, based on [Intercom for WordPress Plugin](https://wordpress.org/plugins/intercom-for-wordpress)

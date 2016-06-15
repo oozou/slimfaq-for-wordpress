@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: SlimFAQ for WordPress
+Plugin Name: SlimFAQ
 Plugin URI: https://wordpress.org/plugins/slimfaq-for-wordpress
 Description: Integrate the <a href="https://slimfaq.com">SlimFAQ</a> sidebar into your WordPress website.
 Author: Constantin Hofstetter (OOZOU)
 Author URI: https://oozou.com
-Version: 1.0
+Version: 1.1
 
 
 
@@ -38,7 +38,7 @@ defined( 'ABSPATH' ) or die();
 
 
 
-define( 'LL_SLIMFAQ_VERSION', '1.0' );
+define( 'LL_SLIMFAQ_VERSION', '1.1' );
 
 
 
@@ -56,9 +56,6 @@ class ll_slimfaq {
 	 */
 	function __construct() {
 
-		register_activation_hook(   __FILE__, array( $this, 'hello'   ) );
-		register_deactivation_hook( __FILE__, array( $this, 'goodbye' ) );
-
 		add_action( 'wp_footer',             array( $this, 'output_install_code'       ) );
 		add_action( 'admin_menu',            array( $this, 'create_options_page'       ) );
 		add_action( 'network_admin_menu',    array( $this, 'create_options_page'       ) );
@@ -67,38 +64,6 @@ class ll_slimfaq {
 		add_action( 'network_admin_notices', array( $this, 'notice'                    ) );
 
 	}
-
-
-
-	/**
-	 * various initiation stuff when the plugin is activated
-	 * @return null
-	 */
-	function hello() {
-
-		// add the 'hide from slimfaq' capability to the admin user
-
-		$role = get_role( 'administrator' );
-		$role->add_cap( 'hide_from_slimfaq' );
-
-	}
-
-
-
-	/**
-	 * stuff to do when the plugin is de-activated
-	 * @return null
-	 */
-	function goodbye() {
-
-		// remove the 'hide from intercom' capability from the admin user
-
-		$role = get_role( 'administrator' );
-		$role->remove_cap( 'hide_from_slimfaq' );
-
-	}
-
-
 
 	/**
 	 * check if this plugin is activated network-wide
@@ -164,7 +129,7 @@ class ll_slimfaq {
 		// or is not logged in and show-for-logged-out is disabled
 		// or the ll_slimfaq_output_snippet filter returns false
 
-		if (  current_user_can( 'hide_from_slimfaq' ) or (!$opts['show-for-logged-out'] and !is_user_logged_in()) or !apply_filters( 'll_slimfaq_output_snippet', true ) )
+		if ((!$opts['show-for-logged-out'] and !is_user_logged_in()) or !apply_filters( 'll_slimfaq_output_snippet', true ) )
 			return;
 
 		// don't do anything if the app id and secret key fields have not been set
