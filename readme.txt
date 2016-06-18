@@ -1,9 +1,10 @@
 === SlimFAQ ===
-Contributors: lumpysimon, consti
+Contributors: consti
 Tags: intercom, intercom.io, crm, messaging, contact form, support, email, feedback, customer relationship management, users, slimfaq, faq, sidebar
 Requires at least: 3.8
 Tested up to: 4.5
 Stable tag: trunk
+License: GPL license http://www.opensource.org/licenses/gpl-license.php
 
 Easy integration of the SlimFAQ sidebar with optional Intercom integration.
 
