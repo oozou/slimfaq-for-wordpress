@@ -16,9 +16,6 @@ This plugin generates the Javascript install code to integrate all of this funct
 
 This plugin is fully compatible with the [Official Intercom WordPress plugin](https://wordpress.org/plugins/intercom).
 
-This plugin is based on the excellent work of [Simon Blackbourn's](https://lumpylemon.co.uk) [Intercom for WordPress](https://wordpress.org/plugins/intercom-for-wordpress) plugin.
-
-
 == Frequently Asked Questions ==
 
 = How do I get started? =
