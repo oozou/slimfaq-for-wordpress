@@ -14,6 +14,8 @@ Easy integration of the SlimFAQ sidebar with optional Intercom integration.
 
 This plugin generates the Javascript install code to integrate all of this functionality into your WordPress-powered web app.
 
+To use the plugin you must have a [SlimFAQ](https://slimfaq.com) account. You can [sign up for free](https://slimfaq.com) and add a great FAQ to your WordPress web app.
+
 This plugin is fully compatible with the [Official Intercom WordPress plugin](https://wordpress.org/plugins/intercom).
 
 == Frequently Asked Questions ==
