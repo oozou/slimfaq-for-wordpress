@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: SlimFAQ
-Plugin URI: https://wordpress.org/plugins/slimfaq-for-wordpress
+Plugin URI: https://wordpress.org/plugins/slimfaq
 Description: Integrate the <a href="https://slimfaq.com">SlimFAQ</a> sidebar into your WordPress website.
 Author: Constantin Hofstetter (OOZOU)
 Author URI: https://oozou.com
-Version: 1.1
+Version: 1.1.1
 
 
 
@@ -247,7 +247,7 @@ class ll_slimfaq {
 		<div class="wrap">
 
 		<?php screen_icon( 'options-general' ); ?>
-		<h2>SlimFAQ for WordPress Configuration</h2>
+		<h2>SlimFAQ Configuration</h2>
 
 		<div class="postbox-container" style="width:65%;">
 
@@ -313,11 +313,10 @@ class ll_slimfaq {
 						<div class="inside">
 							<p>If this plugin has helped you improve your customer relationships, please consider supporting it:</p>
 							<ul>
-								<li><a href="http://wordpress.org/extend/plugins/slimfaq-for-wordpress/">Rate it and let other people know it works</a>.</li>
+								<li><a href="https://wordpress.org/extend/plugins/slimfaq/">Rate it and let other people know it works</a>.</li>
 								<li>Link to it or share it on Twitter or Facebook.</li>
 								<li>Write a review on your website or blog.</li>
 							</ul>
-							<small>This plugin is based on the excellent <a href="https://wordpress.org/plugins/intercom-for-wordpress">Intercom for Wordpress</a> plugin by <a href="https://lumpylemon.co.uk">Simon Blackbourn</a>.
 						</div>
 					</div>
 				</div>

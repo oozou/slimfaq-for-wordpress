@@ -69,6 +69,9 @@ Possibly, but I've not tried. I can only provide support if you're using the lat
 
 == Changelog ==
 
+= 1.1.1 (18th June 2016) =
+* Cleanup naming and use HTTPS for all links to the plugin.
+
 = 1.1 (15th June 2016) =
 * Remove user role setting; mention the Official Intercom WordPress plugin. Change name to SlimFAQ.
 
