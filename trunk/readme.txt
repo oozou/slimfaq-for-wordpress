@@ -57,6 +57,10 @@ function no_slimfaq_on_page_10( $show ) {
 
 Possibly, but I've not tried. I can only provide support if you're using the latest version of this plugin together with the latest version of WordPress and PHP 5.2.4 or newer.
 
+== Screenshots ==
+
+1. The SlimFAQ plugin integrates smoothly as a sidebar in your WordPress-powered web app.
+
 == Installation ==
 
 1. Upload the slimfaq-for-wordpress folder to your wp-content/plugins/ directory.
